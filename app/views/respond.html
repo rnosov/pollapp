@@ -1,0 +1,24 @@
+<div class="page-header">
+  <h1>Poll.it</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <h3 ng-bind="poll.title"></h3>
+
+    <p ng-bind="poll.description"></p>
+
+    <form ng-submit="ctrl.submit_poll()">
+      <div class="">
+      </div>
+
+      Do you agree?<br>
+        yea <input type="radio" name="foo"><br>
+        naa <input type="radio" name="foo">
+
+
+
+    </form>
+  </div>
+</div>
