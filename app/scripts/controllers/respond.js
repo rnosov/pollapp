@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('pollappApp')
-  .controller('RespondCtrl', function ($scope, $state, $stateParams) {
+  .controller('RespondCtrl', function ($scope, $state, $stateParams, $http) {
     $scope.ctrl = this;
+
+    $scope.responseCode = ($stateParams.responseCode || '');
 
     $scope.poll = {
         title: 'General Agreement Poll',
@@ -21,9 +23,10 @@ angular.module('pollappApp')
             ]
           };
 
-    $scope.responseCode = ($stateParams.responseCode || '');
 
-    this.respond = function() {
+
+    this.submit_poll = function() {
+        $http
     };
 
   });
