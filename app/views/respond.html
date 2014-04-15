@@ -10,14 +10,20 @@
     <p ng-bind="poll.description"></p>
 
     <form ng-submit="ctrl.submit_poll()">
-      <div class="">
+
+      <div class="poll-question well" ng-repeat="q in poll.questions">
+        <span ng-bind="q.questionText"></span>
+        <ul class="question-options-list">
+          <li>
+            <input type="radio" ng-model="q.response" value="yes" name="question-{{$index}}" id="question-{{$index}}-yes">
+            <label for="question-{{$index}}-yes"> yes<label>
+          </li>
+          <li>
+            <input type="radio" ng-model="q.response" value="no"  name="question-{{$index}}" id="question-{{$index}}-no">
+            <label for="question-{{$index}}-no"> no<label>
+          </li>
+        </ul>
       </div>
-
-      Do you agree?<br>
-        yea <input type="radio" name="foo"><br>
-        naa <input type="radio" name="foo">
-
-
 
     </form>
   </div>

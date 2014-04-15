@@ -17,7 +17,7 @@ angular.module('pollappApp', [
       controller: 'StartCtrl'
     })
     .state('respond', {
-      url: '/response/:response_code',
+      url: '/response/:responseCode',
       templateUrl: 'views/respond.html',
       controller: 'RespondCtrl'
     });
@@ -60,7 +60,7 @@ angular.module('pollappApp', [
         }
       };
     }]);
-  })
+  });
   // .run(function ($rootScope, $location, Auth) {
 
   //   // Redirect to login if route requires auth and you're not logged in

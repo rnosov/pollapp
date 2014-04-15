@@ -5,11 +5,11 @@ angular.module('pollappApp')
     $scope.ctrl = this;
 
     $scope.form = {
-        response_code: ($stateParams.response_code || '')
-    };
+        responseCode: ($stateParams.responseCode || '')
+      };
 
-    this.use_response_code = function() {
-        $state.go('respond', {response_code: $scope.form.response_code});
-    };
+    this.useResponseCode = function() {
+        $state.go('respond', {responseCode: $scope.form.responseCode});
+      };
 
   });
