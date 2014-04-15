@@ -4,14 +4,16 @@
 
 <div class="row">
   <div class="col-md-12">
-    <p>Please enter your response code to procede</p>
+    <p>Please enter your response code to procede.</p>
 
     <form ng-submit="ctrl.useResponseCode()">
-      <div class="input-group">
+      <div class="row">
+      <span class="col-md-9">
         <input type="text" class="form-control" ng-model="form.responseCode">
-        <span class="input-group-btn">
-          <input type="submit" class="btn btn-primary" type="button">Continue to Poll</input>
-        </span>
+      </span>
+      <span class="col-md-3">
+        <input type="submit" class="pull-right btn btn-primary" type="button" value="Continue to Poll  ">
+      </span>
       </div>
     </form>
   </div>
