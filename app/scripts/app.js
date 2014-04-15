@@ -13,12 +13,12 @@ angular.module('pollappApp', [
     $stateProvider
     .state('response_start', {
       url: '/response_start',
-      templateUrl: 'views/response_start.html',
+      templateUrl: 'partials/response_start.html',
       controller: 'StartCtrl'
     })
     .state('respond', {
       url: '/response/:responseCode',
-      templateUrl: 'views/respond.html',
+      templateUrl: 'partials/respond.html',
       controller: 'RespondCtrl'
     });
 

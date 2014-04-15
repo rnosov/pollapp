@@ -1,0 +1,20 @@
+<div class="page-header">
+  <h1>Poll.it</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <p>Please enter your response code to procede.</p>
+
+    <form ng-submit="ctrl.useResponseCode()">
+      <div class="row">
+      <span class="col-md-9">
+        <input type="text" class="form-control" ng-model="form.responseCode">
+      </span>
+      <span class="col-md-3">
+        <input type="submit" class="pull-right btn btn-primary" type="button" value="Continue to Poll  ">
+      </span>
+      </div>
+    </form>
+  </div>
+</div>
