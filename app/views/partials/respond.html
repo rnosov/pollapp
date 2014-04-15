@@ -12,15 +12,11 @@
     <form ng-submit="ctrl.submit_poll()">
 
       <div class="poll-question well" ng-repeat="q in poll.questions">
-        <span ng-bind="q.questionText"></span>
+        <span ng-bind="q.question"></span>
         <ul class="question-options-list">
-          <li>
-            <input type="radio" ng-model="q.response" value="yes" name="question-{{$index}}" id="question-{{$index}}-yes">
-            <label for="question-{{$index}}-yes"> yes<label>
-          </li>
-          <li>
-            <input type="radio" ng-model="q.response" value="no"  name="question-{{$index}}" id="question-{{$index}}-no">
-            <label for="question-{{$index}}-no"> no<label>
+          <li ng-repeat="opt in q.options">
+            <input type="radio" ng-model="q.response" value="{{opt}}" name="question-{{q.questionId}}" id="question-{{q.questionId}}-{{opt}}">
+            <label for="question-{{q.questionId}}-{{opt}}" ng-bind="opt"><label>
           </li>
         </ul>
       </div>

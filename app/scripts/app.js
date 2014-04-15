@@ -4,13 +4,19 @@ angular.module('pollappApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ui.router'
+  'ui.router',
+  'angularCharts'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
     $urlRouterProvider.otherwise('/response_start');
 
     $stateProvider
+    .state('report', {
+      url: '/report',
+      templateUrl: 'partials/report.html',
+      controller: 'ReportCtrl'
+    })
     .state('response_start', {
       url: '/response_start',
       templateUrl: 'partials/response_start.html',
