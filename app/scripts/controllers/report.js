@@ -8,18 +8,19 @@ angular.module('pollappApp')
     $scope.chartType = 'pie'
 
     $scope.config = {
-      title : '',
-      tooltips: true,
-      labels : false,
-      mouseover: function() {},
-      mouseout: function() {},
-      click: function() {},
-      legend: {
-        display: true,
-        //could be 'left, right'
-        position: 'left'
+      "labels": false,
+      "title": "Products",
+      "legend": {
+        "display": true,
+        "position": "right"
       }
     }
+
+    $scope.series = [
+      "Sales",
+      "Income",
+      "Expense"
+    ]
 
 
   });

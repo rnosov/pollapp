@@ -7,21 +7,30 @@
 
     <h3 ng-bind="poll.title"></h3>
 
-    <p ng-bind="poll.description"></p>
+    <br>
 
-    <form ng-submit="ctrl.submit_poll()">
+    <h2 ng-show="submitted"> Thank you for your submission.</h2>
 
-      <div class="poll-question well" ng-repeat="q in poll.questions">
-        <span ng-bind="q.question"></span>
-        <ul class="question-options-list">
-          <li ng-repeat="opt in q.options">
-            <input type="radio" ng-model="q.response" value="{{opt}}" name="question-{{q.questionId}}" id="question-{{q.questionId}}-{{opt}}">
-            <label for="question-{{q.questionId}}-{{opt}}" ng-bind="opt"><label>
-          </li>
-        </ul>
-      </div>
+    <div ng-hide="submitted">
+      <p ng-bind="poll.description"></p>
 
-    <input type="submit" class="btn btn-primary pull-right" value="Submit Response">
-    </form>
+      <br>
+
+      <form ng-submit="ctrl.submit_poll()">
+
+        <div class="poll-question well" ng-repeat="q in poll.questions">
+          <span ng-bind="q.question"></span>
+          <ul class="question-options-list">
+            <li ng-repeat="opt in q.options">
+              <input type="radio" ng-model="q.response" value="{{opt}}" name="question-{{q.questionId}}" id="question-{{q.questionId}}-{{opt}}">
+              <label for="question-{{q.questionId}}-{{opt}}" ng-bind="opt"><label>
+            </li>
+          </ul>
+        </div>
+
+      <input type="submit" class="btn btn-primary pull-right" value="Submit Response">
+      </form>
+    </div>
+
   </div>
 </div>
